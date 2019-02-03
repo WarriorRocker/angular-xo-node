@@ -1,0 +1,9 @@
+# Development Modules
+/node_modules
+
+# Build
+/dist
+
+# Environment
+*.njsproj
+*.user
