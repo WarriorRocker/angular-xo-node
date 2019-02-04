@@ -1,8 +1,20 @@
 {
 	"name": "angular-xo",
+	"description": "Xo for Angular Module for Node",
 	"version": "0.1.0",
-	"author": "Travis Brown <warriorrocker@gmail.com>",
-	"private": true,
+	"author": {
+		"name": "Travis Brown",
+		"email": "warriorrocker@gmail.com"
+	},
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/WarriorRocker/angular-xo-node.git"
+	},
+	"homepage": "https://github.com/WarriorRocker/angular-xo-node",
+	"bugs": {
+		"url": "https://github.com/WarriorRocker/angular-xo-node/issues"
+	},
 	"peerDependencies": {
 		"@angular/common": "^6.0.0-rc.0 || ^6.0.0",
 		"@angular/core": "^6.0.0-rc.0 || ^6.0.0",
