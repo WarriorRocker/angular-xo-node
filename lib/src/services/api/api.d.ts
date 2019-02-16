@@ -1,4 +1,4 @@
-﻿export module Api {
+﻿export module XoApi {
 	export interface Response {
 		success?: boolean;
 		message?: string;

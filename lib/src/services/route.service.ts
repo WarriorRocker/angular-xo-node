@@ -1,12 +1,12 @@
 ﻿import { Injectable, Injector } from '@angular/core';
 import { Router, Routes } from '@angular/router';
 
-import { ApiRoutesService } from './api/routes/routes.service';
+import { XoApiRoutesService } from './api/routes/routes.service';
 
 @Injectable()
-export class RouteService {
+export class XoRouteService {
 	constructor(private _injector: Injector,
-		private _routesService: ApiRoutesService) { }
+		private _routesService: XoApiRoutesService) { }
 
 	getRoutes(): Promise<any> {
 		const router = this._injector.get(Router);
@@ -23,6 +23,6 @@ export class RouteService {
 	}
 }
 
-export function InitRoutes(_routeService: RouteService) {
+export function XoInitRoutes(_routeService: XoRouteService) {
 	return () => _routeService.getRoutes();
 }

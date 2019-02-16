@@ -1,7 +1,7 @@
 {
 	"name": "angular-xo",
 	"description": "Xo for Angular Module for Node",
-	"version": "0.1.1",
+	"version": "0.1.2",
 	"author": {
 		"name": "Travis Brown",
 		"email": "warriorrocker@gmail.com"

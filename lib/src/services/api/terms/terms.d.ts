@@ -1,7 +1,7 @@
-﻿import { Api } from '../api';
+﻿import { XoApi } from '../api';
 
-export module Terms {
-	interface TermsFilterResponse extends Api.Response {
+export module XoTerms {
+	interface TermsFilterResponse extends XoApi.Response {
 		terms?: Array<Term>;
 	}
 

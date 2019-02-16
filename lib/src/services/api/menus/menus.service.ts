@@ -3,12 +3,12 @@ import { HttpClient, HttpParams } from '@angular/common/http';
 
 import { Observable } from 'rxjs';
 
-import { ApiService } from '../api.service';
-import { Menus } from './menus';
+import { XoApiService } from '../api.service';
+import { XoMenus } from './menus';
 
 @Injectable()
-export class ApiMenusService extends ApiService {
-	get(name: string): Observable<Menus.MenusGetResponse> {
+export class XoApiMenusService extends XoApiService {
+	get(name: string): Observable<XoMenus.MenusGetResponse> {
 		return this._request.get(this.apiUrl + 'menus/get', {
 			menu: name
 		});

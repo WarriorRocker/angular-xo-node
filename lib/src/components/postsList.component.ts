@@ -1,23 +1,23 @@
 ﻿import { Injectable, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 
-import { Posts } from '../services/api/posts/posts';
-import { ApiPostsService } from '../services/api/posts/posts.service';
-import { PostComponent } from './post.component';
-import { PostService } from '../services/post.service';
+import { XoPosts } from '../services/api/posts/posts';
+import { XoApiPostsService } from '../services/api/posts/posts.service';
+import { XoPostComponent } from './post.component';
+import { XoPostService } from '../services/post.service';
 
 @Injectable()
-export class PostsListComponent extends PostComponent {
-	posts: Array<Posts.Post> = [];
+export class XoPostsListComponent extends XoPostComponent {
+	posts: Array<XoPosts.Post> = [];
 	postsTotal: number = 0;
 	pageCount: number = 0;
-	postsFilterArgs: Posts.PostFilterFilters = {
+	postsFilterArgs: XoPosts.PostFilterFilters = {
 		currentPage: 1,
 		postsPerPage: 10
 	};
 
 	constructor(public _router: Router, public _route: ActivatedRoute,
-		public _post: PostService, public _posts: ApiPostsService) {
+		public _post: XoPostService, public _posts: XoApiPostsService) {
 		super(_router, _route, _post);
 	}
 

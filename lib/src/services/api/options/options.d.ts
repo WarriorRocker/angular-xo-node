@@ -1,7 +1,7 @@
-﻿import { Api } from '../api';
+﻿import { XoApi } from '../api';
 
-export module Options {
-	export interface OptionsGetResponse extends Api.Response {
+export module XoOptions {
+	export interface OptionsGetResponse extends XoApi.Response {
 		fields?: any;
 	}
 }

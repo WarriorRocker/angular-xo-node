@@ -1,7 +1,7 @@
-﻿import { Api } from '../api';
+﻿import { XoApi } from '../api';
 
-export module Config {
-	export interface ConfigGetResponse extends Api.Response {
+export module XoConfig {
+	export interface ConfigGetResponse extends XoApi.Response {
 		config: AppConfig;
 	}
 

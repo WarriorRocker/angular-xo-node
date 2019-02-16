@@ -1,11 +1,11 @@
-﻿import { Api } from '../api';
+﻿import { XoApi } from '../api';
 
-export module Posts {
-	export interface PostsGetResponse extends Api.Response {
+export module XoPosts {
+	export interface PostsGetResponse extends XoApi.Response {
 		post?: Post;
 	}
 
-	export interface PostsFilterResponse extends Api.Response {
+	export interface PostsFilterResponse extends XoApi.Response {
 		posts?: Array<Post>;
 		total?: number;
 	}

@@ -1,11 +1,11 @@
 ﻿import { Injectable } from '@angular/core';
 import { Resolve, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
 
-import { ApiPostsService } from './api/posts/posts.service';
+import { XoApiPostsService } from './api/posts/posts.service';
 
 @Injectable()
-export class PostResolver implements Resolve<any> {
-	constructor(private _postService: ApiPostsService) { }
+export class XoPostResolver implements Resolve<any> {
+	constructor(private _postService: XoApiPostsService) { }
 
 	resolve(_route: ActivatedRouteSnapshot, _state: RouterStateSnapshot) {
 		return new Promise((resolve, reject) => {

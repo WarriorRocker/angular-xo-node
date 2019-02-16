@@ -1,7 +1,7 @@
-﻿import { Api } from '../api';
+﻿import { XoApi } from '../api';
 
-export module Menus {
-	export interface MenusGetResponse extends Api.Response {
+export module XoMenus {
+	export interface MenusGetResponse extends XoApi.Response {
 		items?: Array<NavigationItem>;
 	}
 

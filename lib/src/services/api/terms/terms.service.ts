@@ -3,12 +3,12 @@ import { HttpClient, HttpParams } from '@angular/common/http';
 
 import { Observable } from 'rxjs';
 
-import { ApiService } from '../api.service';
-import { Terms } from './terms';
+import { XoApiService } from '../api.service';
+import { XoTerms } from './terms';
 
 @Injectable()
-export class ApiTermsService extends ApiService {
-	filter(params: Terms.TermsFilterFilters): Observable<Terms.TermsFilterResponse> {
+export class XoApiTermsService extends XoApiService {
+	filter(params: XoTerms.TermsFilterFilters): Observable<XoTerms.TermsFilterResponse> {
 		return this._request.post(this.apiUrl + 'terms/filter', params);
 	}
 }

@@ -3,31 +3,31 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 
-import { ApiModule} from './services/api/api.module';
+import { XoApiModule} from './services/api/api.module';
 
-import { GlobalsModule } from './services/globals.service';
+import { XoGlobalsModule } from './services/globals.service';
 
-import { PostService } from './services/post.service';
-import { RouteService } from './services/route.service';
-import { PostResolver } from './services/post.resolver';
+import { XoPostService } from './services/post.service';
+import { XoRouteService } from './services/route.service';
+import { XoPostResolver } from './services/post.resolver';
 
-import { PostComponent } from './components/post.component';
-import { PostsListComponent } from './components/postsList.component';
+import { XoPostComponent } from './components/post.component';
+import { XoPostsListComponent } from './components/postsList.component';
 
 @NgModule({
 	imports: [
 		BrowserModule,
-		GlobalsModule.forBrowser(),
+		XoGlobalsModule.forBrowser(),
 		HttpClientModule,
 		RouterModule,
-		ApiModule
+		XoApiModule
 	],
 	providers: [
-		RouteService,
-		PostService,
-		PostResolver,
-		PostComponent,
-		PostsListComponent
+		XoRouteService,
+		XoPostService,
+		XoPostResolver,
+		XoPostComponent,
+		XoPostsListComponent
 	]
 })
-export class AngularXoModule { }
+export class XoModule { }

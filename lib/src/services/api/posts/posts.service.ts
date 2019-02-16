@@ -3,24 +3,24 @@ import { HttpClient } from '@angular/common/http';
 
 import { Observable } from 'rxjs';
 
-import { ApiService } from '../api.service';
-import { Posts } from './posts';
+import { XoApiService } from '../api.service';
+import { XoPosts } from './posts';
 
 @Injectable()
-export class ApiPostsService extends ApiService {
-	getPage(url: string): Observable<Posts.PostsGetResponse> {
+export class XoApiPostsService extends XoApiService {
+	getPage(url: string): Observable<XoPosts.PostsGetResponse> {
 		return this._request.get(this.apiUrl + 'posts/get', {
 			url: url
 		});
 	}
 
-	getDraftOrPreview(postId: number): Observable<Posts.PostsGetResponse> {
+	getDraftOrPreview(postId: number): Observable<XoPosts.PostsGetResponse> {
 		return this._request.get(this.apiUrl + 'posts/getDraftOrPreview', {
 			postId: postId
 		});
 	}
 
-	filter(params: Posts.PostFilterFilters): Observable<Posts.PostsFilterResponse> {
+	filter(params: XoPosts.PostFilterFilters): Observable<XoPosts.PostsFilterResponse> {
 		return this._request.post(this.apiUrl + 'posts/filter', params);
 	}
 }

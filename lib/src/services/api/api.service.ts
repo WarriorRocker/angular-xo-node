@@ -1,13 +1,13 @@
 ﻿import { Injectable } from '@angular/core';
 
-import { Globals } from '../globals.service';
-import { ApiRequestService } from './apiRequest.service';
+import { XoGlobals } from '../globals.service';
+import { XoApiRequestService } from './apiRequest.service';
 
 @Injectable()
-export class ApiService {
+export class XoApiService {
 	apiUrl: string;
 
-	constructor(public _globals: Globals, public _request: ApiRequestService) {
+	constructor(public _globals: XoGlobals, public _request: XoApiRequestService) {
 		this.apiUrl = this._globals.appConfig.paths.apiUrl;
 	}
 }

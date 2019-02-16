@@ -3,11 +3,11 @@ import { HttpClient } from '@angular/common/http';
 
 import { Observable } from 'rxjs';
 
-import { Globals } from '../globals.service';
+import { XoGlobals } from '../globals.service';
 
 @Injectable()
-export class ApiRequestService {
-	constructor(public _globals: Globals, public _http: HttpClient) { }
+export class XoApiRequestService {
+	constructor(public _globals: XoGlobals, public _http: HttpClient) { }
 
 	get<T>(url: string, params?: any, useCache?: boolean): Observable<T> {
 		return this.cacheCheck<T>(url, params, useCache, () =>

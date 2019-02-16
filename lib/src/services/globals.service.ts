@@ -1,49 +1,49 @@
 ﻿import { NgModule, ModuleWithProviders } from '@angular/core';
 
-import { Api } from './api/api';
-import { Config } from './api/config/config';
+import { XoApi } from './api/api';
+import { XoConfig } from './api/config/config';
 
-export abstract class Globals { 
-	abstract get appConfig(): Config.AppConfig;
-	abstract get apiCache(): Api.Cache;
+export abstract class XoGlobals { 
+	abstract get appConfig(): XoConfig.AppConfig;
+	abstract get apiCache(): XoApi.Cache;
 }
 
-export class BrowserGlobals extends Globals {
-	get appConfig(): Config.AppConfig {
-		return window['appConfig'] || {} as Config.AppConfig;
+export class XoBrowserGlobals extends XoGlobals {
+	get appConfig(): XoConfig.AppConfig {
+		return window['appConfig'] || {} as XoConfig.AppConfig;
 	}
 
-	get apiCache(): Api.Cache {
-		return window['apiCache'] || {} as Api.Cache;
+	get apiCache(): XoApi.Cache {
+		return window['apiCache'] || {} as XoApi.Cache;
 	}
 }
 
-export class NodeGlobals extends Globals {
-	get appConfig(): Config.AppConfig {
+export class XoNodeGlobals extends XoGlobals {
+	get appConfig(): XoConfig.AppConfig {
 		return {};
 	}
 
-	get apiCache(): Api.Cache {
+	get apiCache(): XoApi.Cache {
 		return {};
 	}
 }
 
 @NgModule({})
-export class GlobalsModule {
+export class XoGlobalsModule {
 	static forBrowser(): ModuleWithProviders {
 		return {
-			ngModule: GlobalsModule,
+			ngModule: XoGlobalsModule,
 			providers: [
-				{ provide: Globals, useClass: BrowserGlobals }
+				{ provide: XoGlobals, useClass: XoBrowserGlobals }
 			]
 		};
 	}
 
 	static forNode(): ModuleWithProviders {
 		return {
-			ngModule: GlobalsModule,
+			ngModule: XoGlobalsModule,
 			providers: [
-				{ provide: Globals, useClass: NodeGlobals }
+				{ provide: XoGlobals, useClass: XoNodeGlobals }
 			]
 		};
 	}

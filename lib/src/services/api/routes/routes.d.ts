@@ -1,11 +1,11 @@
-﻿import { Api } from '../api';
+﻿import { XoApi } from '../api';
 
-export module Routes {
-	export interface RoutingGetResponse extends Api.Response {
+export module XoRoutes {
+	export interface RoutingGetResponse extends XoApi.Response {
 		routes?: Array<any>;
 	}
 
-	export interface RoutingSitemapResponse extends Api.Response {
+	export interface RoutingSitemapResponse extends XoApi.Response {
 		sitemap?: any;
 	}
 }
