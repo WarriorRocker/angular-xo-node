@@ -12,5 +12,6 @@ export module XoMenus {
 		title?: string;
 		url?: string;
 		classes?: string;
+		target?: string;
 	}
 }

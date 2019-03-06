@@ -1,8 +1,30 @@
-# Xo for Angular Module
+# Xo for Angular
 
-This module when imported provides interfaces, API services, components, and resolvers that integrate with the Xo for Angular Wordpress Plugin.
+Connect your Angular App with WordPress when using the Xo for Angular plugin.
 
-## Install the Module
+https://wordpress.org/plugins/xo-for-angular/
+
+## Install the module
+
 ```
 $ npm i angular-xo -D
+```
+
+## Import XoModule into your app
+
+```
+import { NgModule } from '@angular/core';
+import { XoModule } from 'angular-xo';
+import { AppComponent } from './app.component';
+
+@NgModule({
+    imports: [
+        XoModule
+    ],
+    declarations: [
+        AppComponent
+    ],
+    bootstrap: [AppComponent]
+})
+export class AppModule { }
 ```
