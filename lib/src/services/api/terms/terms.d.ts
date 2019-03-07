@@ -11,16 +11,58 @@ export module XoTerms {
 		orderby?: string;
 	}
 
+	/**
+	 * Single fully formed Term object.
+	 */
 	export interface Term {
+		/**
+		 * ID of the term mapped from term_id.
+		 */
 		id?: number;
-		slug?: string;
-		name?: string;
-		description?: string;
+
+		/**
+		 * ID of the term's parent mapped from parent.
+		 */
 		parent?: number;
+
+		/**
+		 * URL slug of the term mapped from slug.
+		 */
+		slug?: string;
+
+		/**
+		 * Name of the term mapped from name.
+		 */
+		name?: string;
+
+		/**
+		 * Description of the term mapped from description.
+		 */
+		description?: string;
+
+		/**
+		 * Group of the term mapped from group.
+		 */
 		group?: string;
+
+		/**
+		 * Taxonomy of the term mapped from taxonomy.
+		 */
 		taxonomy?: string;
+
+		/**
+		 * ID of the Taxonomy of the term mapped from term_taxonomy_id.
+		 */
 		taxonomyId?: number;
+
+		/**
+		 * Relative URL of the term using get_term_link and wp_make_link_relative.
+		 */
 		url?: string;
+
+		/**
+		 * Optional collection of meta set for the given term.
+		 */
 		meta?: Array<TermMeta>;
 	}
 

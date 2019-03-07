@@ -20,22 +20,79 @@ export module XoPosts {
 		taxQuery?: any;
 	}
 
+	/**
+	 * Single fully formed post object.
+	 */
 	export interface Post {
+		/**
+		 * ID of the post mapped from ID.
+		 */
 		id?: number;
+
+		/**
+		 * ID of the post's parent mapped from post_parent.
+		 */
+		parent?: number;
+
+		/**
+		 * Name of the post type mapped from post_type.
+		 */
 		type?: string;
-		title?: string;
+
+		/**
+		 * Url slug of the post mapped from post_name.
+		 */
 		slug?: string;
-		url?: string;
+
+		/**
+		 * Title of the post mapped from post_title.
+		 */
+		title?: string;
+
+		/**
+		 * Order of the post mapped from menu_order.
+		 */
+		order?: number;
+
+		/**
+		 * Date of the post mapped from post_date.
+		 */
 		date?: string;
+
+		/**
+		 * Modified date of the post mapped from post_modified.
+		 */
 		modified?: string;
+
+		/**
+		 * Content of the post mapped from post_content with the_content filter applied.
+		 */
 		content?: string;
-		fields?: PostFields;
-		meta?: PostMeta;
+
+		/**
+		 * Relative URL of the post using get_permalink and wp_make_link_relative.
+		 */
+		url?: string;
+
+		/**
+		 * Optional collection of terms applied to the given post.
+		 */
 		terms?: PostTerms
+
+		/**
+		 * Optional collection of meta set for the given post.
+		 */
+		meta?: PostMeta;
+
+		/**
+		 * Optional collection of ACF fields set for the given post.
+		 */
+		fields?: PostFields;
+
+		/**
+		 * Optional set of breadcrumb items for the given post's URL.
+		 */
 		breadcrumbs?: Array<Post>;
-		archiveUrl?: string;
-		prevUrl?: string;
-		nextUrl?: string;
 	}
 
 	interface PostFields {
@@ -43,6 +100,7 @@ export module XoPosts {
 	}
 
 	interface PostMeta {
+		[name: string]: any;
 	}
 
 	interface PostTerms {
