@@ -1,7 +1,7 @@
 {
 	"name": "angular-xo",
 	"description": "Xo for Angular Module for Node",
-	"version": "0.1.6",
+	"version": "0.1.5",
 	"author": {
 		"name": "Travis Brown",
 		"email": "warriorrocker@gmail.com"
@@ -11,7 +11,7 @@
 		"type": "git",
 		"url": "https://github.com/WarriorRocker/angular-xo-node.git"
 	},
-	"homepage": "https://github.com/WarriorRocker/angular-xo-node",
+	"homepage": "https://angularxo.io",
 	"bugs": {
 		"url": "https://github.com/WarriorRocker/angular-xo-node/issues"
 	},
