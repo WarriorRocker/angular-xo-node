@@ -1,10 +1,12 @@
 ﻿import { Injectable, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
+import { Title } from '@angular/platform-browser';
+
+import { XoGlobals } from '../../services/globals/globals.service';
 
 import { XoPosts } from '../../services/api/posts/posts';
 import { XoApiPostsService } from '../../services/api/posts/posts.service';
 import { XoPostComponent } from './post.component';
-import { XoPostService } from '../../services/posts/post.service';
 
 @Injectable()
 export class XoPostsListComponent extends XoPostComponent {
@@ -17,8 +19,9 @@ export class XoPostsListComponent extends XoPostComponent {
 	};
 
 	constructor(public _router: Router, public _route: ActivatedRoute,
-		public _post: XoPostService, public _posts: XoApiPostsService) {
-		super(_router, _route, _post);
+		public _title: Title, public _globals: XoGlobals,
+		public _posts: XoApiPostsService) {
+		super(_router, _route, _title, _globals);
 	}
 
 	ngOnInit(): void {

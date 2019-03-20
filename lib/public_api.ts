@@ -29,13 +29,12 @@ export { XoGlobals, XoGlobalsModule } from './src/services/globals/globals.servi
 export { XoRouteService, XoInitRoutes } from './src/services/routes/route.service';
 
 export { XoPostResolver } from './src/services/posts/post.resolver';
-export { XoPostService } from './src/services/posts/post.service';
 
 export { XoPostComponent } from './src/components/posts/post.component';
 export { XoPostsListComponent } from './src/components/posts/postsList.component';
+export { XoPostTermComponent } from './src/components/posts/postTerm.component';
 
 export { XoTermResolver } from './src/services/terms/term.resolver';
-export { XoTermService } from './src/services/terms/term.service';
 
 export { XoTermComponent } from './src/components/terms/term.component';
 

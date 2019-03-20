@@ -2,7 +2,6 @@
 
 export module XoTerms {
 	interface TermsGetResponse extends XoApi.Response {
-		taxonomy?: any;
 		term?: Term;
 	}
 
@@ -68,10 +67,19 @@ export module XoTerms {
 		/**
 		 * Optional collection of meta set for the given term.
 		 */
-		meta?: Array<TermMeta>;
+		meta?: TermMeta;
+
+		/**
+		 * Optional collection of ACF fields set for the given term.
+		 */
+		fields?: TermFields;
 	}
 
 	export interface TermMeta {
+		[name: string]: any;
+	}
+
+	export interface TermFields {
 		[name: string]: any;
 	}
 }

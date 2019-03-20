@@ -7,29 +7,27 @@ import { Observable } from 'rxjs';
 import { XoGlobals } from '../../services/globals/globals.service';
 
 import { XoPosts } from '../../services/api/posts/posts';
+import { XoTerms } from '../../services/api/terms/terms';
+
+import { XoPostComponent } from './post.component';
 
 @Injectable()
-export class XoPostComponent implements OnInit {
-	post: XoPosts.Post;
+export class XoPostTermComponent extends XoPostComponent {
+	term: XoTerms.Term;
 
 	constructor(public _router: Router, public _route: ActivatedRoute,
 		public _title: Title, public _globals: XoGlobals) {
-		this._router.routeReuseStrategy.shouldReuseRoute = () => false;
+		super(_router, _route, _title, _globals);
 	}
 
 	ngOnInit() {
 		this.setPost();
+		this.setTerm();
 	}
 
-	setPost(): void {
-		if (this._route.snapshot.data['post']) {
-			this.post = this._route.snapshot.data['post'];
-			this.setTitle();
+	setTerm(): void {
+		if (this._route.snapshot.data['term']) {
+			this.term = this._route.snapshot.data['term'];
 		}
-	}
-
-	setTitle(): void {
-		const title = ((this.post.title) ? this.post.title + ' | ' : '') + this._globals.appConfig.app.title;
-		this._title.setTitle(title);
 	}
 }

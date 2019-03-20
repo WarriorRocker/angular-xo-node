@@ -9,13 +9,12 @@ import { XoGlobalsModule } from './services/globals/globals.service';
 
 import { XoRouteService } from './services/routes/route.service';
 
-import { XoPostService } from './services/posts/post.service';
 import { XoPostResolver } from './services/posts/post.resolver';
 
 import { XoPostComponent } from './components/posts/post.component';
 import { XoPostsListComponent } from './components/posts/postsList.component';
+import { XoPostTermComponent } from './components/posts/postTerm.component';
 
-import { XoTermService } from './services/terms/term.service';
 import { XoTermResolver } from './services/terms/term.resolver';
 
 import { XoTermComponent } from './components/terms/term.component';
@@ -30,11 +29,10 @@ import { XoTermComponent } from './components/terms/term.component';
 	],
 	providers: [
 		XoRouteService,
-		XoPostService,
 		XoPostResolver,
 		XoPostComponent,
 		XoPostsListComponent,
-		XoTermService,
+		XoPostTermComponent,
 		XoTermResolver,
 		XoTermComponent
 	]

@@ -99,19 +99,19 @@ export module XoPosts {
 		breadcrumbs?: Array<Post>;
 	}
 
-	interface PostFields {
+	export interface PostFields {
 		[name: string]: any;
 	}
 
-	interface PostMeta {
+	export interface PostMeta {
 		[name: string]: any;
 	}
 
-	interface PostTerms {
+	export interface PostTerms {
 		[name: string]: Array<PostTerm>;
 	}
 
-	interface PostTerm {
+	export interface PostTerm {
 		[name: string]: string;
 	}
 }
