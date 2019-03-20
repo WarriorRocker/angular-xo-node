@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 
 import { Observable } from 'rxjs';
 
-import { XoGlobals } from '../globals.service';
+import { XoGlobals } from '../globals/globals.service';
 
 @Injectable()
 export class XoApiRequestService {

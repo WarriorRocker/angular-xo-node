@@ -10,7 +10,7 @@ export module XoPosts {
 		total?: number;
 	}
 
-	export interface PostFilterFilters {
+	export interface PostsFilterFilters {
 		postType?: string;
 		postsPerPage?: number;
 		currentPage?: number;
@@ -18,6 +18,10 @@ export module XoPosts {
 		orderby?: string;
 		search?: string;
 		taxQuery?: any;
+	}
+
+	export interface PostsConfigResponse extends XoApi.Response {
+		config?: any;
 	}
 
 	/**

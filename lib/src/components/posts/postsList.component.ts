@@ -1,17 +1,17 @@
 ﻿import { Injectable, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 
-import { XoPosts } from '../services/api/posts/posts';
-import { XoApiPostsService } from '../services/api/posts/posts.service';
+import { XoPosts } from '../../services/api/posts/posts';
+import { XoApiPostsService } from '../../services/api/posts/posts.service';
 import { XoPostComponent } from './post.component';
-import { XoPostService } from '../services/post.service';
+import { XoPostService } from '../../services/posts/post.service';
 
 @Injectable()
 export class XoPostsListComponent extends XoPostComponent {
 	posts: Array<XoPosts.Post> = [];
 	postsTotal: number = 0;
 	pageCount: number = 0;
-	postsFilterArgs: XoPosts.PostFilterFilters = {
+	postsFilterArgs: XoPosts.PostsFilterFilters = {
 		currentPage: 1,
 		postsPerPage: 10
 	};

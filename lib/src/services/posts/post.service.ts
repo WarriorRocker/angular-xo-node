@@ -3,8 +3,8 @@ import { Title } from '@angular/platform-browser';
 
 import { Observable, BehaviorSubject } from 'rxjs';
 
-import { XoGlobals } from './globals.service';
-import { XoPosts } from './api/posts/posts';
+import { XoGlobals } from '../globals/globals.service';
+import { XoPosts } from '../api/posts/posts';
 
 @Injectable()
 export class XoPostService {

@@ -5,14 +5,20 @@ import { RouterModule } from '@angular/router';
 
 import { XoApiModule} from './services/api/api.module';
 
-import { XoGlobalsModule } from './services/globals.service';
+import { XoGlobalsModule } from './services/globals/globals.service';
 
-import { XoPostService } from './services/post.service';
-import { XoRouteService } from './services/route.service';
-import { XoPostResolver } from './services/post.resolver';
+import { XoRouteService } from './services/routes/route.service';
 
-import { XoPostComponent } from './components/post.component';
-import { XoPostsListComponent } from './components/postsList.component';
+import { XoPostService } from './services/posts/post.service';
+import { XoPostResolver } from './services/posts/post.resolver';
+
+import { XoPostComponent } from './components/posts/post.component';
+import { XoPostsListComponent } from './components/posts/postsList.component';
+
+import { XoTermService } from './services/terms/term.service';
+import { XoTermResolver } from './services/terms/term.resolver';
+
+import { XoTermComponent } from './components/terms/term.component';
 
 @NgModule({
 	imports: [
@@ -27,7 +33,10 @@ import { XoPostsListComponent } from './components/postsList.component';
 		XoPostService,
 		XoPostResolver,
 		XoPostComponent,
-		XoPostsListComponent
+		XoPostsListComponent,
+		XoTermService,
+		XoTermResolver,
+		XoTermComponent
 	]
 })
 export class XoModule { }

@@ -19,7 +19,13 @@ export class XoApiPostsService extends XoApiService {
 		});
 	}
 
-	filter(params: XoPosts.PostFilterFilters): Observable<XoPosts.PostsFilterResponse> {
+	filter(params: XoPosts.PostsFilterFilters): Observable<XoPosts.PostsFilterResponse> {
 		return this._request.post(this.apiUrl + 'posts/filter', params);
+	}
+
+	config(postType: string): Observable<XoPosts.PostsConfigResponse> {
+		return this._request.get(this.apiUrl + 'posts/config', {
+			postType: postType
+		});
 	}
 }

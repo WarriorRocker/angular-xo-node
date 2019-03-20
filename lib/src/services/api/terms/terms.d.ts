@@ -1,6 +1,11 @@
 ﻿import { XoApi } from '../api';
 
 export module XoTerms {
+	interface TermsGetResponse extends XoApi.Response {
+		taxonomy?: any;
+		term?: Term;
+	}
+
 	interface TermsFilterResponse extends XoApi.Response {
 		terms?: Array<Term>;
 	}

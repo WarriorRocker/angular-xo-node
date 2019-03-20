@@ -1,7 +1,8 @@
 ﻿import { Injectable } from '@angular/core';
 import { Resolve, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
 
-import { XoApiPostsService } from './api/posts/posts.service';
+import { XoPosts } from '../api/posts/posts';
+import { XoApiPostsService } from '../api/posts/posts.service';
 
 @Injectable()
 export class XoPostResolver implements Resolve<any> {
@@ -11,7 +12,7 @@ export class XoPostResolver implements Resolve<any> {
 		return new Promise((resolve, reject) => {
 			const previewId: number = _route.queryParams['preview_id'];
 
-			const onSubscribe = (response) => {
+			const onSubscribe = (response: XoPosts.PostsGetResponse) => {
 				if (response.success)
 					resolve(response.post);
 				reject();

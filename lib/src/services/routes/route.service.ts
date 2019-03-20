@@ -1,7 +1,7 @@
 ﻿import { Injectable, Injector } from '@angular/core';
 import { Router, Routes } from '@angular/router';
 
-import { XoApiRoutesService } from './api/routes/routes.service';
+import { XoApiRoutesService } from '../api/routes/routes.service';
 
 @Injectable()
 export class XoRouteService {

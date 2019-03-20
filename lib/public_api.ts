@@ -24,13 +24,19 @@ export { XoApiRoutesService } from './src/services/api/routes/routes.service';
 export { XoTerms } from './src/services/api/terms/terms';
 export { XoApiTermsService } from './src/services/api/terms/terms.service';
 
-export { XoGlobals, XoGlobalsModule } from './src/services/globals.service';
-export { XoRouteService, XoInitRoutes } from './src/services/route.service';
+export { XoGlobals, XoGlobalsModule } from './src/services/globals/globals.service';
 
-export { XoPostResolver } from './src/services/post.resolver';
-export { XoPostService } from './src/services/post.service';
+export { XoRouteService, XoInitRoutes } from './src/services/routes/route.service';
 
-export { XoPostComponent } from './src/components/post.component';
-export { XoPostsListComponent } from './src/components/postsList.component';
+export { XoPostResolver } from './src/services/posts/post.resolver';
+export { XoPostService } from './src/services/posts/post.service';
+
+export { XoPostComponent } from './src/components/posts/post.component';
+export { XoPostsListComponent } from './src/components/posts/postsList.component';
+
+export { XoTermResolver } from './src/services/terms/term.resolver';
+export { XoTermService } from './src/services/terms/term.service';
+
+export { XoTermComponent } from './src/components/terms/term.component';
 
 export { XoModule } from './src/angular-xo.module';

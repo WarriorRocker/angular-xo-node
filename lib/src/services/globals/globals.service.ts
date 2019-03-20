@@ -1,7 +1,7 @@
 ﻿import { NgModule, ModuleWithProviders } from '@angular/core';
 
-import { XoApi } from './api/api';
-import { XoConfig } from './api/config/config';
+import { XoApi } from '../api/api';
+import { XoConfig } from '../api/config/config';
 
 export abstract class XoGlobals { 
 	abstract get appConfig(): XoConfig.AppConfig;

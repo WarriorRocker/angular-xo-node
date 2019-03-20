@@ -1,6 +1,6 @@
 ﻿import { Injectable } from '@angular/core';
 
-import { XoGlobals } from '../globals.service';
+import { XoGlobals } from '../globals/globals.service';
 import { XoApiRequestService } from './apiRequest.service';
 
 @Injectable()
