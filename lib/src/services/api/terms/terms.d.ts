@@ -2,17 +2,34 @@
 
 export module XoTerms {
 	interface TermsGetResponse extends XoApi.Response {
+		/**
+		 * Single term object.
+		 */
 		term?: Term;
 	}
 
-	interface TermsFilterResponse extends XoApi.Response {
-		terms?: Array<Term>;
+	export interface TermsFilterRequest {
+		/**
+		 * Name of the taxonomy to filter terms.
+		 */
+		taxonomy?: string;
+
+		/**
+		 * Sets the order direction of returned terms, defaults to 'DESC'.
+		 */
+		order?: string;
+
+		/**
+		 * Property of the term to order by.
+		 */
+		orderby?: string;
 	}
 
-	export interface TermsFilterFilters {
-		taxonomy?: string;
-		order?: string;
-		orderby?: string;
+	interface TermsFilterResponse extends XoApi.Response {
+		/**
+		 * Collection of terms returned for given filters.
+		 */
+		terms?: Array<Term>;
 	}
 
 	/**

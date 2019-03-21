@@ -13,7 +13,7 @@ export class XoApiTermsService extends XoApiService {
 		});
 	}
 
-	filter(params: XoTerms.TermsFilterFilters): Observable<XoTerms.TermsFilterResponse> {
+	filter(params: XoTerms.TermsFilterRequest): Observable<XoTerms.TermsFilterResponse> {
 		return this._request.post(this.apiUrl + 'terms/filter', params);
 	}
 }

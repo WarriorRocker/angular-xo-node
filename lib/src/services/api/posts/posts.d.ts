@@ -2,6 +2,9 @@
 
 export module XoPosts {
 	export interface PostsGetResponse extends XoApi.Response {
+		/**
+		 * Single post object.
+		 */
 		post?: Post;
 	}
 
