@@ -5,19 +5,58 @@ export module XoPosts {
 		post?: Post;
 	}
 
-	export interface PostsFilterResponse extends XoApi.Response {
-		posts?: Array<Post>;
-		total?: number;
+	export interface PostsFilterRequest {
+		/**
+		 * Name of the explicit post type to filter.
+		 */
+		postType?: string;
+
+		/**
+		 * Amount of posts to return per page, -1 returns all.
+		 */
+		postsPerPage?: number;
+
+		/**
+		 * The current page of posts to return.
+		 */
+		currentPage?: number;
+
+		/**
+		 * Sets the order direction of returned posts, defaults to 'DESC'.
+		 */
+		order?: string;
+
+		/**
+		 * Property of the post to order by.
+		 */
+		orderby?: string;
+
+		/**
+		 * Optional search query, split on spaces.
+		 */
+		search?: string;
+
+		/**
+		 * Additional taxonomy filters.
+		 */
+		taxQuery?: any;
 	}
 
-	export interface PostsFilterFilters {
-		postType?: string;
-		postsPerPage?: number;
-		currentPage?: number;
-		order?: string;
-		orderby?: string;
-		search?: string;
-		taxQuery?: any;
+	export interface PostsFilterResponse extends XoApi.Response {
+		/**
+		 * Collection of posts returned for given filters and pagination.
+		 */
+		posts?: Array<Post>;
+
+		/**
+		 * Amount of posts returned for the given filters and pagination.
+		 */
+		count?: number;
+
+		/**
+		 * Amount of posts possible for the given filters.
+		 */
+		total?: number;
 	}
 
 	export interface PostsConfigResponse extends XoApi.Response {
@@ -100,18 +139,30 @@ export module XoPosts {
 	}
 
 	export interface PostFields {
+		/**
+		 * Generic declaration for additional post fields.
+		 */
 		[name: string]: any;
 	}
 
 	export interface PostMeta {
+		/**
+		 * Generic declaration for additional post meta.
+		 */
 		[name: string]: any;
 	}
 
 	export interface PostTerms {
+		/**
+		 * Generic declaration for additional post taxonomies.
+		 */
 		[name: string]: Array<PostTerm>;
 	}
 
 	export interface PostTerm {
+		/**
+		 * Generic declaration for additional post taxonomy terms.
+		 */
 		[name: string]: string;
 	}
 }

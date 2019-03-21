@@ -13,7 +13,7 @@ export class XoPostsListComponent extends XoPostComponent {
 	posts: Array<XoPosts.Post> = [];
 	postsTotal: number = 0;
 	pageCount: number = 0;
-	postsFilterArgs: XoPosts.PostsFilterFilters = {
+	postsFilterArgs: XoPosts.PostsFilterRequest = {
 		currentPage: 1,
 		postsPerPage: 10
 	};
