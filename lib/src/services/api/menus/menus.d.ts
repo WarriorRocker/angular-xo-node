@@ -2,45 +2,73 @@
 
 export module XoMenus {
 	export interface MenusGetResponse extends XoApi.Response {
-		items?: Array<NavigationItem>;
+		/**
+		 * Collection of menu item objects.
+		 */
+		items?: Array<Menu>;
 	}
 
 	/**
-	 * Single fully formed menu object.
+	 * Single fully formed menu item object.
 	 */
-	export interface NavigationItem {
+	export interface Menu {
 		/**
-		 * ID of the menu mapped from ID.
+		 * ID of the menu item mapped from ID.
 		 */
 		id?: number;
 
 		/**
-		 * ID of the menu's parent mapped from menu_item_parent.
+		 * ID of the menu item's parent mapped from menu_item_parent.
 		 */
 		parent?: number;
 
 		/**
-		 * Order of the menu mapped from menu_order.
+		 * Type of the object of the linked menu item mapped from type.
 		 */
-		order?: number;
+		type?: string;
 
 		/**
-		 * Title of the menu mapped from title.
+		 * Link text of the menu item mapped from title.
 		 */
 		title?: string;
 
 		/**
-		 * Relative URL of the menu or absolute if target is set to _blank.
+		 * Order of the menu item mapped from menu_order.
+		 */
+		order?: number;
+
+		/**
+		 * Date of the menu item mapped from post_date.
+		 */
+		date?: string;
+
+		/**
+		 * Modified date of the menu item mapped from post_modified.
+		 */
+		modified?: string;
+
+		/**
+		 * URL of the menu item or relative URL if using target="_blank" mapped from url.
 		 */
 		url?: string;
 
+		/**
+		 * Type of linked menu item object mapped from object.
+		 */
+		object?: string;
+
+		/**
+		 * ID of the linked menu item object mapped from object_id.
+		 */
+		objectId?: number;
+
 		/*
-		 * Additional css classes that may be used in the front-end.
+		 * Additional CSS classes that may be used in the front-end.
 		 */
 		classes?: string;
 
 		/**
-		 * Target for the anchor link.
+		 * Target for the anchor link applied to the menu item.
 		 */
 		target?: string;
 	}
