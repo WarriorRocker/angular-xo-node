@@ -10,4 +10,8 @@ export class XoApiRoutesService extends XoApiService {
 	get(): Observable<XoRoutes.RoutesGetResponse> {
 		return this._request.get(this.apiUrl + 'routes/get');
 	}
+
+	sitemap(): Observable<XoRoutes.SitemapGetResponse> {
+		return this._request.get(this.apiUrl + 'routes/sitemap');
+	}
 }

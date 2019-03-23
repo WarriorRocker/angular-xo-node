@@ -8,6 +8,13 @@ export module XoRoutes {
 		routes?: Array<Route>;
 	}
 
+	export interface SitemapGetResponse extends XoApi.Response {
+		/**
+		 * Collection of fully formed sitemap entry objects.
+		 */
+		entries?: Array<SitemapEntry>;
+	}
+
 	export interface Route {
 		/**
 		 * The path property of the Angular Route item.
@@ -45,5 +52,22 @@ export module XoRoutes {
 		 * Use the :slug portion of the route as the ID of a post preview or draft route.
 		 */
 		postPreview?: boolean;
+	}
+
+	export interface SitemapEntry {
+		/**
+		 * Title text of the sitemap entry.
+		 */
+		title?: string;
+
+		/**
+		 * Relative URL of the sitemap entry.
+		 */
+		url?: string;
+
+		/**
+		 * Collection of children which fall under the current parent.
+		 */
+		children?: Array<SitemapEntry>;
 	}
 }
