@@ -7,7 +7,7 @@ import { XoRoutes } from './routes';
 
 @Injectable()
 export class XoApiRoutesService extends XoApiService {
-	get(): Observable<XoRoutes.RoutingGetResponse> {
+	get(): Observable<XoRoutes.RoutesGetResponse> {
 		return this._request.get(this.apiUrl + 'routes/get');
 	}
 }
