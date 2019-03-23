@@ -10,8 +10,6 @@ export class XoPostResolver implements Resolve<any> {
 
 	resolve(_route: ActivatedRouteSnapshot, _state: RouterStateSnapshot) {
 		return new Promise((resolve, reject) => {
-			const previewId: number = _route.queryParams['preview_id'];
-
 			const onSubscribe = (response: XoPosts.PostsGetResponse) => {
 				if (response.success)
 					resolve(response.post);
