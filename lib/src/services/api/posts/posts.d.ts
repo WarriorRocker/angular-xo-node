@@ -134,11 +134,6 @@ export module XoPosts {
 		 * Optional collection of ACF fields set for the given post.
 		 */
 		fields?: PostFields;
-
-		/**
-		 * Optional set of breadcrumb items for the given post's URL.
-		 */
-		breadcrumbs?: Array<Post>;
 	}
 
 	export interface PostFields {
