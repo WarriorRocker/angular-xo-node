@@ -24,7 +24,7 @@ export class XoPostResolver implements Resolve<any> {
 					.subscribe(onSubscribe);
 			} else {
 				const url = ((_route.data.url) ? (_route.data.url) : _state.url.split(/[?#]/)[0]);
-				this._postService.getPage(url).subscribe(onSubscribe);
+				this._postService.get(url).subscribe(onSubscribe);
 			}
 		});
 	}

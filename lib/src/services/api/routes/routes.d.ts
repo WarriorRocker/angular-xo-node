@@ -8,7 +8,14 @@ export module XoRoutes {
 		routes?: Array<Route>;
 	}
 
-	export interface SitemapGetResponse extends XoApi.Response {
+	export interface BreadcrumbsResponse extends XoApi.Response {
+		/**
+		 * Collection of fully formed breadcrumb sitemap objects.
+		 */
+		breadcrumbs?: Array<SitemapEntry>;
+	}
+
+	export interface SitemapResponse extends XoApi.Response {
 		/**
 		 * Collection of fully formed sitemap entry objects.
 		 */

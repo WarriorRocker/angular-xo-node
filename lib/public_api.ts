@@ -38,4 +38,6 @@ export { XoTermResolver } from './src/services/terms/term.resolver';
 
 export { XoTermComponent } from './src/components/terms/term.component';
 
+export { XoBreadcrumbsResolver } from './src/services/routes/breadcrumbs.resolver';
+
 export { XoModule } from './src/angular-xo.module';

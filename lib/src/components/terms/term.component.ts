@@ -7,9 +7,11 @@ import { Observable } from 'rxjs';
 import { XoGlobals } from '../../services/globals/globals.service';
 
 import { XoTerms } from '../../services/api/terms/terms';
+import { XoRoutes } from '../../services/api/routes/routes';
 
 @Injectable()
 export class XoTermComponent implements OnInit {
+	breadcrumbs: Array<XoRoutes.SitemapEntry>;
 	term: XoTerms.Term;
 
 	constructor(public _router: Router, public _route: ActivatedRoute,
@@ -22,6 +24,10 @@ export class XoTermComponent implements OnInit {
 	}
 
 	setTerm(): void {
+		if (this._route.snapshot.data['breadcrumbs']) {
+			this.breadcrumbs = this._route.snapshot.data['breadcrumbs'];
+		}
+
 		if (this._route.snapshot.data['term']) {
 			this.term = this._route.snapshot.data['term'];
 			this.setTitle();

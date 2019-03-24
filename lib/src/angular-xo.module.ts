@@ -3,7 +3,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 
-import { XoApiModule} from './services/api/api.module';
+import { XoApiModule } from './services/api/api.module';
 
 import { XoGlobalsModule } from './services/globals/globals.service';
 
@@ -18,6 +18,8 @@ import { XoPostTermComponent } from './components/posts/postTerm.component';
 import { XoTermResolver } from './services/terms/term.resolver';
 
 import { XoTermComponent } from './components/terms/term.component';
+
+import { XoBreadcrumbsResolver } from './services/routes/breadcrumbs.resolver';
 
 @NgModule({
 	imports: [
@@ -34,7 +36,8 @@ import { XoTermComponent } from './components/terms/term.component';
 		XoPostsListComponent,
 		XoPostTermComponent,
 		XoTermResolver,
-		XoTermComponent
+		XoTermComponent,
+		XoBreadcrumbsResolver
 	]
 })
 export class XoModule { }
