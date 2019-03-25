@@ -14,7 +14,7 @@ export class XoApiMenusService extends XoApiService {
 	 * Get a navigation menu by location name.
 	 */
 	get(name: string): Observable<XoMenus.MenusGetResponse> {
-		return this._request.get(this.apiUrl + 'menus/get', {
+		return this._request.get('/menus/get', {
 			menu: name
 		});
 	}

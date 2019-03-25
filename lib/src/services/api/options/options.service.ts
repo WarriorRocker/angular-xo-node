@@ -14,7 +14,7 @@ export class XoApiOptionsService extends XoApiService {
 	 * Get an option group by name.
 	 */
 	get(name: string): Observable<XoOptions.OptionsGetResponse> {
-		return this._request.get(this.apiUrl + 'options/get', {
+		return this._request.get('/options/get', {
 			name: name
 		});
 	}

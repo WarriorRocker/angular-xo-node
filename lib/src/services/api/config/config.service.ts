@@ -14,6 +14,6 @@ export class XoApiConfigService extends XoApiService {
 	 * Get the main site configuration.
 	 */
 	get(name: string): Observable<XoConfig.ConfigGetResponse> {
-		return this._request.get(this.apiUrl + 'config/get');
+		return this._request.get('/config/get');
 	}
 }

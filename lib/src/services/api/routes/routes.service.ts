@@ -14,14 +14,14 @@ export class XoApiRoutesService extends XoApiService {
 	 * Get the dynamic route configuration.
 	 */
 	get(): Observable<XoRoutes.RoutesGetResponse> {
-		return this._request.get(this.apiUrl + 'routes/get');
+		return this._request.get('/routes/get');
 	}
 
 	/**
 	 * Get breadcrumb sitemap entries for the given URL.
 	 */
 	breadcrumbs(url: string): Observable<XoRoutes.BreadcrumbsResponse> {
-		return this._request.get(this.apiUrl + 'routes/breadcrumbs', {
+		return this._request.get('/routes/breadcrumbs', {
 			url: url
 		});
 	}
@@ -30,6 +30,6 @@ export class XoApiRoutesService extends XoApiService {
 	 * Get sitemap entries for posts and terms.
 	 */
 	sitemap(): Observable<XoRoutes.SitemapResponse> {
-		return this._request.get(this.apiUrl + 'routes/sitemap');
+		return this._request.get('/routes/sitemap');
 	}
 }
