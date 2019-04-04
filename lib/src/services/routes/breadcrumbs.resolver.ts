@@ -13,7 +13,8 @@ export class XoBreadcrumbsResolver implements Resolve<any> {
 			const onSubscribe = (response: XoRoutes.BreadcrumbsResponse) => {
 				if (response.success)
 					resolve(response.breadcrumbs);
-				reject();
+
+				resolve();
 			};
 
 			const url = ((_route.data.url) ? (_route.data.url) : _state.url.split(/[?#]/)[0]);
