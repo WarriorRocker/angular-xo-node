@@ -28,3 +28,6 @@ import { AppComponent } from './app.component';
 })
 export class AppModule { }
 ```
+
+## [Changes](CHANGELOG.md)
+All notable changes to this project.
