@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
-import { BrowserModule } from '@angular/platform-browser';
+import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
 import { XoApiModule } from './services/api/api.module';
@@ -23,10 +23,10 @@ import { XoBreadcrumbsResolver } from './services/routes/breadcrumbs.resolver';
 
 @NgModule({
 	imports: [
-		BrowserModule,
-		XoGlobalsModule.forBrowser(),
-		HttpClientModule,
+		CommonModule,
 		RouterModule,
+		HttpClientModule,
+		XoGlobalsModule.forBrowser(),
 		XoApiModule
 	],
 	providers: [
@@ -40,4 +40,4 @@ import { XoBreadcrumbsResolver } from './services/routes/breadcrumbs.resolver';
 		XoBreadcrumbsResolver
 	]
 })
-export class XoModule { }
+export class XoModule {}

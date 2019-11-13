@@ -1,26 +1,26 @@
 {
-  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "version": 1,
-  "projects": {
-    "angular-xo": {
-      "root": "",
-      "sourceRoot": "src",
-      "projectType": "library",
-      "architect": {
-        "build": {
-          "builder": "@angular-devkit/build-ng-packagr:build",
-          "options": {
-            "tsConfig": "src/tsconfig.json",
-            "project": "src/ng-package.json"
-          },
-          "configurations": {
-            "production": {
-              "project": "src/ng-package.prod.json"
-            }
-          }
-        }
-      }
-    }
-  },
-  "defaultProject": "angular-xo"
+	"$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+	"version": 1,
+	"projects": {
+		"angular-xo": {
+			"root": "",
+			"sourceRoot": "src",
+			"projectType": "library",
+			"architect": {
+				"build": {
+					"builder": "@angular-devkit/build-ng-packagr:build",
+					"options": {
+						"tsConfig": "lib/tsconfig.json",
+						"project": "lib/package.json"
+					},
+					"configurations": {
+						"production": {
+							"project": "lib/ng-package.prod.json"
+						}
+					}
+				}
+			}
+		}
+	},
+	"defaultProject": "angular-xo"
 }
