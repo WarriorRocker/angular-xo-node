@@ -1,6 +1,10 @@
 # Changelog
 All notable changes to the angular-xo module will be documented in this file.
 
+## 0.2.2 - 2019-11-14
+### Changed
+ - Update Angular dependencies to version 8.
+
 ## 0.2.1 - 2019-05-25
 ### Changed
  - Refactor API services moving API url into base service.
