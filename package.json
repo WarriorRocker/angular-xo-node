@@ -1,7 +1,25 @@
 {
+  "name": "angular-xo-build",
+  "description": "Xo for Angular Build",
+  "version": "0.2.0",
+  "author": {
+    "name": "Travis Brown",
+    "email": "warriorrocker@gmail.com"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/WarriorRocker/angular-xo-node.git"
+  },
+  "homepage": "https://angularxo.io",
+  "bugs": {
+    "url": "https://github.com/WarriorRocker/angular-xo-node/issues"
+  },
   "scripts": {
+    "copy": "ncp README.md dist/README.md && ncp CHANGELOG.md dist/CHANGELOG.md && ncp LICENSE dist/LICENSE",
     "build": "ng build",
-    "watch": "ng build --watch"
+    "watch": "ng build --watch",
+    "deploy": "npm run build && npm run copy"
   },
   "dependencies": {
     "@angular/common": "^8.2.13",
@@ -16,6 +34,7 @@
     "@angular/cli": "^8.3.18",
     "@angular/compiler": "^8.2.13",
     "@angular/compiler-cli": "^8.2.13",
+    "ncp": "^2.0.0",
     "ng-packagr": "^5.7.1",
     "typescript": "^3.4.5"
   }
